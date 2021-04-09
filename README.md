@@ -20,17 +20,14 @@ The example presented here is based on the technical brief [TB3254 - How to Use 
 
 ## Hardware Used
 * [Microchip ATtiny1627 Curiosity Nano Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DM080104)
-<!-- All hardware used in this example must be listed here. Use unbreakable links!
-     - PIC18F47Q10 Curiosity Nano [(DM182029)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
-     - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
-     - POT Click board™ [(MIKROE-3402)](https://www.mikroe.com/pot-click) -->
+
 
 ## Peripherals Configuration using MCC
 ### Added Peripherals
-![Added Peripherals](images/peripherals.png "Added Peripherals")
+![Added Peripherals](images/Peripherals.png "Added Peripherals")
 ### Pin Manager
 ![Pin Manager](images/Pinmanager.PNG "Pin Manager")
-![Pin Manager Grid View](images/Pinmanager_Grid.PNG "Pin Manager GRid View")
+![Pin Manager Grid View](images/Pinmanager_grid.PNG "Pin Manager GRid View")
 ### Analog to Digital Converter
 ![ADC0](images/Adc1.PNG "ADC0")
 ![ADC0](images/Adc2.PNG "ADC0")
