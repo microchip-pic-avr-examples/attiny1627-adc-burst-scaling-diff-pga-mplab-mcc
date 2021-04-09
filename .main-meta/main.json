@@ -4,27 +4,27 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.attiny1627-adc-burst-scaling-diff-pga-mplab-mcc",
-        "version": "",
-        "displayName": "",
+        "version": "1.0.0",
+        "displayName": "How to Use the 12-Bit Differential ADC with PGA in Burst Accumulation Scaling Mode",
         "projectName": "attiny1627-adc-burst-scaling-diff-pga-mplab-mcc",
-        "shortDescription": "",
+        "shortDescription": "This MCC MPLAB® X project shows how to achieve a 16-bit resolution for the 12-bit ADC of the ATtiny1627. This is achieved through differential measurements using the Burst Accumulation with Scaling mode, the PGA with 16x gain, and oversampling.",
         "ide": {
             "name": "MPLAB X",
-            "semverRange": ""
+            "semverRange": ">=5.45.0"
         },
         "compiler": [
 			{
 				"name": "XC8",
-				"semverRange": ""
+				"semverRange": "^2.31.0"
 			}
 		],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "ATtiny_DFP",
+            "semverRange": "^2.6.122"
         },
         "configurator": {
-            "name": "",
-            "semverRange": ""
+            "name": "MCC",
+            "semverRange": ">=4.1.0"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -32,16 +32,30 @@
             "content": {
                 "metaDataVersion": "1.0.0",
                 "category": "com.microchip.device",
-                "name": "",
+                "name": "ATtiny1627",
                 "versionRange": "*"
             }
         },
-        "author": "",
+        "author": "Rupali Honrao",
         "subcategories": [
+			[
+				"Peripherals", "ADC"
+			]
         ],
         "peripherals": [
+				"ADC"
         ],
         "keywords": [
+			"Programmable Gain Amplifiers",
+            "PGA",
+            "Differential ADC",
+            "12-bit ADC",
+            "Oversampling",
+            "Accumulation Scaling",
+			"16-bit Resolution",
+			"Burst Accumulation",
+			"Curiosity Nano",
+			"adc-burst-scaling-diff-pga"
         ],
 		"additionalData": {
 			"longDescription": {

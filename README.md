@@ -1,41 +1,55 @@
 <!-- Please do not change this logo with link -->
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# Update the title for attiny1627-adc-burst-scaling-diff-pga-mplab-mcc here
+# How to Use the 12-Bit Differential ADC with PGA in Burst Accumulation Scaling Mode
 
-<!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
+This MCC MPLAB® X project shows how to achieve 16-bit resolution using a 12-bit ADC. This is achieved through differential measurements using the Burst Accumulation with Scaling mode, the PGA with 16x gain, and oversampling. The 12-bit differential ADC with PGA is featured in the ATtiny1627 microcontroller.
+
+The example presented here is based on the technical brief [TB3254 - How to Use the 12-Bit Differential ADC with PGA in Burst Accumulation Mode](https://www.microchip.com/wwwappnotes/appnotes.aspx?appnote=en1003019)
 
 ## Related Documentation
-
-<!-- Any information about an application note or tech brief can be linked here. Use unbreakable links!
-     In addition a link to the device family landing page and relevant peripheral pages as well:
-     - [AN3381 - Brushless DC Fan Speed Control Using Temperature Input and Tachometer Feedback](https://microchip.com/00003381/)
-     - [PIC18F-Q10 Family Product Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family) -->
+* [TB3254 - How to Use the 12-Bit Differential ADC with PGA in Burst Accumulation Mode](https://www.microchip.com/wwwappnotes/appnotes.aspx?appnote=en1003019)
+* [ATtiny1627 device page](https://www.microchip.com/wwwproducts/en/ATTINY1627)
 
 ## Software Used
-
-<!-- All software used in this example must be listed here. Use unbreakable links!
-     - MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-     - MPLAB® XC8 2.10 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-     - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) -->
+* [MPLAB® X IDE](http://www.microchip.com/mplab/mplab-x-ide) **5.45** or newer 
+* [MPLAB® XC8](http://www.microchip.com/mplab/compilers) **2.31** or a newer compiler 
+* [MPLAB® Code Configurator (MCC)](https://www.microchip.com/mplab/mplab-code-configurator) **4.1.0** or newer 
+* [MPLAB® Melody Library](https://www.microchip.com/mplab/mplab-code-configurator) **1.37.13** or newer 
+* ATtiny **2.6.122** or newer Device Pack
 
 ## Hardware Used
-
+* [Microchip ATtiny1627 Curiosity Nano Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DM080104)
 <!-- All hardware used in this example must be listed here. Use unbreakable links!
      - PIC18F47Q10 Curiosity Nano [(DM182029)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
      - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
      - POT Click board™ [(MIKROE-3402)](https://www.mikroe.com/pot-click) -->
 
-## Setup
+## Peripherals Configuration using MCC
+### Added Peripherals
+![Added Peripherals](images/peripherals.png "Added Peripherals")
+### Pin Manager
+![Pin Manager](images/Pinmanager.PNG "Pin Manager")
+![Pin Manager Grid View](images/Pinmanager_Grid.PNG "Pin Manager GRid View")
+### Analog to Digital Converter
+![ADC0](images/Adc1.PNG "ADC0")
+![ADC0](images/Adc2.PNG "ADC0")
 
-<!-- Explain how to connect hardware and set up software. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+
+## Setup
+* Connect signals to PA6 and PA7
+  * Positive ADC input: AIN6 -> PA6
+  * Negative ADC input: AIN7 -> PA7
+* The difference between the signals must range between 0V and 64 mV, and the signals must range between GND and VDD
+* To see the 16-bit result, place a breakpoint in the while(1) loop in the main() function and use a debugger to start a debug session. When the device is halted, the variables that are interesting may be placed in the watch list to see their values. 
+* If measuring across a 5 ohm resistor, the second to last line in the main() function can be uncommented to measure the current through the resistor. This is further explained in the [technical brief](https://www.microchip.com/wwwappnotes/appnotes.aspx?appnote=en1003019).
 
 ## Operation
+* Connect the ATtiny1627 Curiosity Nano to a computer using the USB cable
+* Download the zip file or clone the example to get the source code
+* Open the .X file with the MPLAB® X IDE
+* Set the *attiny1627-adc-burst-scaling-diff-pga-mplab-mcc* project as main project. Right click on the project in the *Projects* tab and click *Set as Main Project*.
+* Program the project to the board: right click on the project and click *Make and Program Device*. 
 
-<!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
-
-## Summary
-
-<!-- Summarize what the example has shown -->
+## Conclusion
+This example has shown how to achieve a 16-bit resolution for a 12-bit ADC, by using the ATtiny1627 12-bit differential ADC with PGA in Burst Accumulation Mode.
