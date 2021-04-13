@@ -55,7 +55,8 @@
 			"16-bit Resolution",
 			"Burst Accumulation",
 			"Curiosity Nano",
-			"adc-burst-scaling-diff-pga"
+			"adc-burst-scaling-diff-pga",
+			"Melody"
         ],
 		"additionalData": {
 			"longDescription": {
