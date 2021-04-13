@@ -25,9 +25,6 @@ The example presented here is based on the technical brief [TB3254 - How to Use 
 ## Peripherals Configuration using MCC
 ### Added Peripherals
 ![Added Peripherals](images/Peripherals.png "Added Peripherals")
-### Pin Manager
-![Pin Manager](images/Pinmanager.PNG "Pin Manager")
-![Pin Manager Grid View](images/Pinmanager_grid.PNG "Pin Manager GRid View")
 ### Analog to Digital Converter
 ![ADC0](images/Adc1.PNG "ADC0")
 ![ADC0](images/Adc2.PNG "ADC0")

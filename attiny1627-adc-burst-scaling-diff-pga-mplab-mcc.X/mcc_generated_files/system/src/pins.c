@@ -37,8 +37,6 @@
 
 #include "../pins.h"
 
-static void (*PA6_InterruptHandler)(void);
-static void (*PA7_InterruptHandler)(void);
 void PORT_Initialize(void);
 
 void PIN_MANAGER_Initialize()
@@ -89,8 +87,6 @@ void PIN_MANAGER_Initialize()
     PORTMUX.USARTROUTEA = 0x0;
 
   // register default ISC callback functions at runtime; use these methods to register a custom function
-    PA6_SetInterruptHandler(PA6_DefaultInterruptHandler);
-    PA7_SetInterruptHandler(PA7_DefaultInterruptHandler);
 }
 
 void PORT_Initialize(void)
@@ -113,43 +109,9 @@ void PORT_Initialize(void)
     }
     
 }
-/**
-  Allows selecting an interrupt handler for PA6 at application runtime
-*/
-void PA6_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    PA6_InterruptHandler = interruptHandler;
-}
-
-void PA6_DefaultInterruptHandler(void)
-{
-    // add your PA6 interrupt custom code
-    // or set custom function using PA6_SetInterruptHandler()
-}
-/**
-  Allows selecting an interrupt handler for PA7 at application runtime
-*/
-void PA7_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    PA7_InterruptHandler = interruptHandler;
-}
-
-void PA7_DefaultInterruptHandler(void)
-{
-    // add your PA7 interrupt custom code
-    // or set custom function using PA7_SetInterruptHandler()
-}
 ISR(PORTA_PORT_vect)
 {  
     // Call the interrupt handler for the callback registered at runtime
-    if(VPORTA.INTFLAGS & PORT_INT6_bm)
-    {
-       PA6_InterruptHandler();
-    }
-    if(VPORTA.INTFLAGS & PORT_INT7_bm)
-    {
-       PA7_InterruptHandler();
-    }
 
     /* Clear interrupt flags */
     VPORTA.INTFLAGS = 0xff;
