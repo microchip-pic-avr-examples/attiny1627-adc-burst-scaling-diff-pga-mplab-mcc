@@ -3,7 +3,7 @@
 
 # How to Use the 12-Bit Differential ADC with PGA in Burst Accumulation Scaling Mode
 
-This MCC MPLAB® X project shows how to achieve 16-bit resolution using a 12-bit ADC. This is achieved through differential measurements using the Burst Accumulation with Scaling mode, the PGA with 16x gain, and oversampling. The 12-bit differential ADC with PGA is featured in the ATtiny1627 microcontroller.
+This MPLAB® X Melody project shows how to achieve 16-bit resolution using a 12-bit ADC. This is achieved through differential measurements using the Burst Accumulation with Scaling mode, the PGA with 16x gain, and oversampling. The 12-bit differential ADC with PGA is featured in the ATtiny1627 microcontroller.
 
 The example presented here is based on the technical brief [TB3254 - How to Use the 12-Bit Differential ADC with PGA in Burst Accumulation Mode](https://www.microchip.com/wwwappnotes/appnotes.aspx?appnote=en1003019)
 

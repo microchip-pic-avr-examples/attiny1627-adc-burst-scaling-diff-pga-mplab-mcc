@@ -7,7 +7,7 @@
         "version": "1.0.0",
         "displayName": "How to Use the 12-Bit Differential ADC with PGA in Burst Accumulation Scaling Mode",
         "projectName": "attiny1627-adc-burst-scaling-diff-pga-mplab-mcc",
-        "shortDescription": "This MCC MPLAB® X project shows how to achieve a 16-bit resolution for the 12-bit ADC of the ATtiny1627. This is achieved through differential measurements using the Burst Accumulation with Scaling mode, the PGA with 16x gain, and oversampling.",
+        "shortDescription": "This MPLAB® X Melody project shows how to achieve a 16-bit resolution for the 12-bit ADC of the ATtiny1627. This is achieved through differential measurements using the Burst Accumulation with Scaling mode, the PGA with 16x gain, and oversampling.",
         "ide": {
             "name": "MPLAB X",
             "semverRange": ">=5.45.0"

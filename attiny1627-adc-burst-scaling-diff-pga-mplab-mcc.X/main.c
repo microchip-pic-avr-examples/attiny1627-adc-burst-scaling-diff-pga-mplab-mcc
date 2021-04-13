@@ -68,8 +68,8 @@ int main(void)
 		ADC0.COMMAND |= ADC_START_IMMEDIATE_gc;
 		while(!(ADC0.INTFLAGS & ADC_RESRDY_bm)); /* Wait until conversion is done */
 
-		adc_reading = ADC0.RESULT; /* Read 16 bit scaled or left adjusted result */
-
+		adc_reading = ADC0_GetDiffConversion(1, ADC_MUXPOS_AIN6_gc, ADC_MUXNEG_AIN7_gc); /* Read 16 bit scaled or left adjusted result */
+		
 		/* Calculate the differential voltage, VREF = 1.024V, 16-bit resolution, 16x gain. */
 		voltage = (float)((adc_reading * 1.024) / ADC_DIFF_MAX_VALUE_16BIT) / 16;
 		//current = voltage / 5;   /* Uncomment this line if measuring across a 5 ohm resistor in series with the power supply */
