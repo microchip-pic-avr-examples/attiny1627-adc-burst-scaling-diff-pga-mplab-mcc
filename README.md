@@ -43,7 +43,6 @@ The example presented here is based on the technical brief [TB3254 - How to Use 
 * Connect the ATtiny1627 Curiosity Nano to a computer using the USB cable
 * Download the zip file or clone the example to get the source code
 * Open the .X file with the MPLAB® X IDE
-* Set the *attiny1627-adc-burst-scaling-diff-pga-mplab-mcc* project as main project. Right click on the project in the *Projects* tab and click *Set as Main Project*.
 * Program the project to the board: right click on the project and click *Make and Program Device*. 
 
 ## Conclusion
